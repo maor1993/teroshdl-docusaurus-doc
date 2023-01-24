@@ -1,1 +1,6 @@
-# teroshdl-docusaurus-doc
+# TerosHDL Documentation
+
+```
+npm install
+npm run start
+```
