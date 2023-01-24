@@ -9,7 +9,7 @@
   position: relative;
   overflow: hidden;
   /* background-color: #d32500; */
-  background-image: url("/home/carlos/repo/my-website/static/img/front.png");
+  background-image: url("../../static/img/front.png");
   background-size: 100% 100%;
 }
 
