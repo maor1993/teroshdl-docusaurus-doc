@@ -1,8 +1,8 @@
 ---
-description: How to documents HDL elements
+description: SV/Verilog elements
 ---
 
-# HDL elements
+# Verilog/SV elements
 
 
 ## Supported labels
