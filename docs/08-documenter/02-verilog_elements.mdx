@@ -1,0 +1,101 @@
+---
+description: SV/Verilog elements
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+
+# Verilog/SV elements
+:::note
+by default, the documenter will use ```//! ``` to recognize things to document.
+:::
+
+
+## Supported labels
+Here are the following labels supported by the documenter:
+* Module Description
+* Ports
+* Parameters
+* Constants
+* Registers / Wires
+* Always Block
+* Instances
+* Functions
+* Typedefs
+
+export const Hdl = ({name, children, image}) => (
+    <div>
+    <h2 id={name} toc={toc}> {name} </h2>
+    <Tabs>
+    <TabItem value="windows" label="Code" default>
+    <CodeBlock language="verilog">{children}</CodeBlock>
+    </TabItem>
+    <TabItem value="linux" label="Documentation">
+    <img src={image} alt="Example banner" />;
+    </TabItem>
+    </Tabs>
+    </div>
+);
+
+
+export const verilog_elements = [
+    {
+        'name': "Module",
+        'code': mod
+    },
+    {
+        'name': "Ports",
+        'code': mod
+    },
+    {
+        'name': "Parameters",
+        'code': mod
+    },
+    {
+        'name': "Constants",
+        'code': constants
+    },
+    {
+        'name': "Always",
+        'code': always
+    },
+    {
+        'name': "Instances",
+        'code': inst
+    },
+    {
+        'name': "Functions",
+        'code': funcs
+    },
+    {
+        'name': "Typedefs",
+        'code': typedefs
+    },
+]
+
+import mod from '!!raw-loader!./examples/verilog/module.v';
+import constants from '!!raw-loader!./examples/verilog/constants.v';
+import funcs from '!!raw-loader!./examples/verilog/funcs.v';
+import inst from '!!raw-loader!./examples/verilog/inst.v';
+import always from '!!raw-loader!./examples/verilog/always.v';
+import typedefs from '!!raw-loader!./examples/verilog/typedefs.v';
+
+
+export const CreateAll = ({elements}) =>(
+    <>
+{
+  elements.map((el) => {
+    toc.push({
+        value: el["name"],
+        id: el["name"],
+        level: 2,
+    })
+    return(
+      <Hdl name={el["name"]} image="None" children={el["code"]} id={el["name"]}/>
+)
+  })
+}
+</>
+ )
+
+<CreateAll elements={verilog_elements}/>

@@ -10,27 +10,26 @@ import CodeBlock from '@theme/CodeBlock';
 import myImageUrl from '../../static/img/documenter/vhdl/process.png';
 
 # VHDL elements
+:::note
+by default, the documenter will use ```--! ``` to recognize things to document.
+:::
 
-<center>
 
-| VHDL               | SV/Verilog         |
-|--------------------|--------------------|
-| Entity description | Module description |
-| Ports              | Ports              |
-| Generics           | Parameters         |
-| Constants          | Constants          |
-| Signals            | regs/wires         |
-| Processes          | Always             |
-| Instances          | Instances          |
-| Functions          | Functions          |
-| Types              | Types              |
-
-</center>
-
+## Supported labels
+Here are the following labels supported by the documenter:
+* Entity description
+* Ports             
+* Generics          
+* Constants         
+* Signals           
+* Processes         
+* Instances         
+* Functions         
+* Types             
 
 export const Hdl = ({name, children, image}) => (
     <div>
-    <h1> {name} </h1>
+    <h2 id={name}> {name} </h2>
     <Tabs>
     <TabItem value="windows" label="Code" default>
     <CodeBlock language="vhdl">{children}</CodeBlock>
@@ -92,11 +91,20 @@ import f from '!!raw-loader!./examples/vhdl/function.vhd';
 import process from '!!raw-loader!./examples/vhdl/process.vhd';
 import tp from '!!raw-loader!./examples/vhdl/type.vhd';
 
-<Hdl name={vhdl_elements[0]["name"]} image={myImageUrl}>{vhdl_elements[0]["code"]}</Hdl>
-<Hdl name={vhdl_elements[1]["name"]} image={myImageUrl}>{vhdl_elements[1]["code"]}</Hdl>
-<Hdl name={vhdl_elements[2]["name"]} image={myImageUrl}>{vhdl_elements[2]["code"]}</Hdl>
-<Hdl name={vhdl_elements[3]["name"]} image={myImageUrl}>{vhdl_elements[3]["code"]}</Hdl>
-<Hdl name={vhdl_elements[4]["name"]} image={myImageUrl}>{vhdl_elements[4]["code"]}</Hdl>
-<Hdl name={vhdl_elements[5]["name"]} image={myImageUrl}>{vhdl_elements[5]["code"]}</Hdl>
-<Hdl name={vhdl_elements[6]["name"]} image={myImageUrl}>{vhdl_elements[6]["code"]}</Hdl>
-<Hdl name={vhdl_elements[7]["name"]} image={myImageUrl}>{vhdl_elements[7]["code"]}</Hdl>
+export const CreateAll = ({elements}) =>(
+    <>
+{
+  elements.map((el) => {
+    toc.push({
+        value: el["name"],
+        id: el["name"],
+        level: 2,
+    })
+    return(<Hdl name={el["name"]} image="None" image={myImageUrl} children={el["code"]} id={el["name"]}/>)
+  })
+}
+</>
+)
+
+
+<CreateAll elements={vhdl_elements}/>
