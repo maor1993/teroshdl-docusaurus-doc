@@ -27,9 +27,9 @@ Here are the following labels supported by the documenter:
 * Functions         
 * Types             
 
-export const Hdl = ({name, children, image}) => (
+export const Hdl = ({name, children, image,id}) => (
     <div>
-    <h2 id={name}> {name} </h2>
+    <h2 id={id}> {name} </h2>
     <Tabs>
     <TabItem value="windows" label="Code" default>
     <CodeBlock language="vhdl">{children}</CodeBlock>
@@ -95,16 +95,22 @@ export const CreateAll = ({elements}) =>(
     <>
 {
   elements.map((el) => {
-    toc.push({
+    let newitm = {
         value: el["name"],
-        id: el["name"],
-        level: 2,
-    })
-    return(<Hdl name={el["name"]} image="None" image={myImageUrl} children={el["code"]} id={el["name"]}/>)
+        id: el["name"].toLowerCase(),
+        level: 3,
+    };
+    let exists = toc.find((tocid)=>{return tocid["id"]==newitm["id"]})
+    if(exists==undefined){
+        toc.push(newitm);
+    }
+    return(
+      <Hdl name={el["name"]} image="None" children={el["code"]} id={el["name"].toLowerCase()}/>
+    )
   })
 }
 </>
-)
+ )
 
 
 <CreateAll elements={vhdl_elements}/>

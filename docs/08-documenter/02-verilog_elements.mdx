@@ -23,9 +23,9 @@ Here are the following labels supported by the documenter:
 * Functions
 * Typedefs
 
-export const Hdl = ({name, children, image}) => (
+export const Hdl = ({name, children, image,id}) => (
     <div>
-    <h2 id={name} toc={toc}> {name} </h2>
+    <h2 id={id} toc={toc}> {name} </h2>
     <Tabs>
     <TabItem value="windows" label="Code" default>
     <CodeBlock language="verilog">{children}</CodeBlock>
@@ -77,25 +77,31 @@ import mod from '!!raw-loader!./examples/verilog/module.v';
 import constants from '!!raw-loader!./examples/verilog/constants.v';
 import funcs from '!!raw-loader!./examples/verilog/funcs.v';
 import inst from '!!raw-loader!./examples/verilog/inst.v';
-import always from '!!raw-loader!./examples/verilog/always.v';
-import typedefs from '!!raw-loader!./examples/verilog/typedefs.v';
+import always from '!!raw-loader!./examples/verilog/always.sv';
+import typedefs from '!!raw-loader!./examples/verilog/typedefs.sv';
 
 
 export const CreateAll = ({elements}) =>(
     <>
 {
   elements.map((el) => {
-    toc.push({
+    let newitm = {
         value: el["name"],
-        id: el["name"],
-        level: 2,
-    })
+        id: el["name"].toLowerCase(),
+        level: 3,
+    };
+    let exists = toc.find((tocid)=>{return tocid["id"]==newitm["id"]})
+    if(exists==undefined){
+        toc.push(newitm);
+    }
     return(
-      <Hdl name={el["name"]} image="None" children={el["code"]} id={el["name"]}/>
-)
+      <Hdl name={el["name"]} image="None" children={el["code"]} id={el["name"].toLowerCase()}/>
+    )
   })
 }
 </>
  )
+import TOCInline from '@theme/TOCInline';
+
 
 <CreateAll elements={verilog_elements}/>
