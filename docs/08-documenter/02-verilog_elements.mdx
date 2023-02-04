@@ -27,11 +27,11 @@ export const Hdl = ({name, children, image,id}) => (
     <div>
     <h2 id={id} toc={toc}> {name} </h2>
     <Tabs>
-    <TabItem value="windows" label="Code" default>
+    <TabItem value="code" label="Code" default>
     <CodeBlock language="verilog">{children}</CodeBlock>
     </TabItem>
-    <TabItem value="linux" label="Documentation">
-    <img src={image} alt="Example banner" />;
+    <TabItem value="result" label="Result">
+    <img src={image} alt="documentation result" />
     </TabItem>
     </Tabs>
     </div>
@@ -41,35 +41,43 @@ export const Hdl = ({name, children, image,id}) => (
 export const verilog_elements = [
     {
         'name': "Module",
-        'code': mod
+        'code': mod,
+        'impath': modimage
     },
     {
         'name': "Ports",
-        'code': mod
+        'code': mod,
+        'impath': portimage
     },
     {
         'name': "Parameters",
-        'code': mod
+        'code': mod,
+        'impath': parameterimage
     },
     {
         'name': "Constants",
-        'code': constants
+        'code': constants,
+        'impath': constimage
     },
     {
         'name': "Always",
-        'code': always
+        'code': always,
+        'impath': alwaysimage
     },
     {
         'name': "Instances",
-        'code': inst
+        'code': inst,
+        'impath': instimage
     },
     {
         'name': "Functions",
-        'code': funcs
+        'code': funcs,
+        'impath': funcimage
     },
     {
         'name': "Typedefs",
-        'code': typedefs
+        'code': typedefs,
+        'impath': typedefimage
     },
 ]
 
@@ -80,6 +88,14 @@ import inst from '!!raw-loader!./examples/verilog/inst.v';
 import always from '!!raw-loader!./examples/verilog/always.sv';
 import typedefs from '!!raw-loader!./examples/verilog/typedefs.sv';
 
+import modimage from '@site/static/img/documenter/verilog/module.png'
+import portimage from '@site/static/img/documenter/verilog/port.png'
+import parameterimage from '@site/static/img/documenter/verilog/parameter.png'
+import constimage from '@site/static/img/documenter/verilog/module.png'
+import alwaysimage from '@site/static/img/documenter/verilog/always.png'
+import instimage from '@site/static/img/documenter/verilog/inst.png'
+import funcimage from '@site/static/img/documenter/verilog/functions.png'
+import typedefimage from '@site/static/img/documenter/verilog/typedef.png'
 
 export const CreateAll = ({elements}) =>(
     <>
@@ -95,7 +111,7 @@ export const CreateAll = ({elements}) =>(
         toc.push(newitm);
     }
     return(
-      <Hdl name={el["name"]} image="None" children={el["code"]} id={el["name"].toLowerCase()}/>
+      <Hdl name={el["name"]} image={el["impath"]} children={el["code"]} id={el["name"].toLowerCase()}/>
     )
   })
 }

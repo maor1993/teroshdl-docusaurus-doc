@@ -1,8 +1,11 @@
-module tb_mytb;
+module tb_mytb(
+    input clk,
+    input rstn
+);
 
-mytb dut(
-    .rst_n (rst_n),
-    .clk (clk),
+mymodule dut(
+    .rstn (rstn),
+    .clk (clk)
 );
 
 

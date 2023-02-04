@@ -1,8 +1,9 @@
 module alwaysmod (
-    input clk
+    input clk,
+    input rstn
 );
     
-always @(posedge clk ) begin: myproc
+always @(posedge clk or negedge rstn) begin: myproc
     
 end
 endmodule

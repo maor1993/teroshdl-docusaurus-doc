@@ -1,10 +1,10 @@
 //! @title mymodule design
 //! @author terosHDL
-module myModule #(
+module mymodule #(
     parameter PARAM1 = 1024 //! number of bytes in fifo
 )(
-    output reg [1023:0] data,
-    input clk,
+    output reg [PARAM1-1:0] data, 
+    input clk, //! 300Mhz Clock
     input rstn
 );
     
