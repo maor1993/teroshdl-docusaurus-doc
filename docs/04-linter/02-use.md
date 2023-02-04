@@ -12,12 +12,12 @@ Hovering over the error will show the linters reported issue:
 <p align="center">
 <i>Image 1: Example Error in Code</i>
 
-![Example Error](/img/linter-error-example.png) 
+![Example Error](/img/linter/linter-error-example.png) 
 </p>
 
 You can also see all of the errors in all of the currently open files under the <i>Problems</i> tab:
 <p align="center">
 <i>Image 2: Example Error in Problems</i>
 
-![Example Error](/img/linter-problems.png) 
+![Example Error](/img/linter/linter-problems.png) 
 </p>
