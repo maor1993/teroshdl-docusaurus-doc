@@ -7,7 +7,7 @@
 
 Lets Look at the following VHDL:
 
-```VHDL
+```vhdl
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -80,7 +80,7 @@ This will correspond with the following state machine diagram:
 
 We can also do the same with verilog:
 
-```Verilog
+```verilog
 module verilog_sm (
     input clk,
     input rstn
