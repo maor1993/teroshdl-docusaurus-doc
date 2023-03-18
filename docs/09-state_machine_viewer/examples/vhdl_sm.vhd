@@ -4,9 +4,12 @@ use ieee.numeric_std.all;
 
 entity vhdl_sm is
     port (
-        clk   : in std_logic;
-        reset : in std_logic;
+        finish_strb: out std_logic;
         
+        clk   : in std_logic;
+        reset : in std_logic
+        
+
     );
 end entity vhdl_sm;
 
@@ -15,16 +18,16 @@ type sm_t is (IDLE,PUSH_A,PUSH_B,CRC); --! My State machine
 signal state : sm_t;
 signal next_state : sm_t;    
 
-signal push_a_done;
-signal push_b_done;
-signal new_data;
-signal crc_done;
+signal push_a_done: std_logic;
+signal push_b_done: std_logic;
+signal new_data: std_logic;
+signal crc_done: std_logic;
 
 begin
 
-incr_sm_proc: process (clk,rstn)
+incr_sm_proc: process (clk,reset)
 begin
-    if (rstn = '0') then
+    if (reset = '0') then
         state <= IDLE;
     elsif rising_edge(clk) then
        state <= next_state; 
@@ -55,4 +58,7 @@ begin
             next_state <= IDLE;
     end case;
 end process;
+
+finish_strb <= '1' when next_state=CRC else '0';
+
 end architecture;
