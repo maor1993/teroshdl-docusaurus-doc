@@ -2,7 +2,7 @@
 description: Generate a template
 ---
 
-# Getting started
+# Templates
 
 <p align="center">
 

@@ -1,5 +1,0 @@
----
-description: Editor configuration
----
-
-# Configuration

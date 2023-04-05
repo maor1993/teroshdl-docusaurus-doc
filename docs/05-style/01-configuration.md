@@ -32,8 +32,8 @@ Under *Linter Settings -> Verible linter* you can modify verible command line ar
 You can find the list of rules in this [Link](https://chipsalliance.github.io/verible/lint.html)
 
 
-<center><i>Image 1: Example Arguments</i></center>
-<center>MISSING IMAGE</center>
+<!-- <center><i>Image 1: Example Arguments</i></center>
+<center>MISSING IMAGE</center> -->
 
 
 ### VSG Settings

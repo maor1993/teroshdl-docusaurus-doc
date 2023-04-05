@@ -20,3 +20,17 @@ The IDE tries to be as much self-contained as possible and simplify the installa
 
 ![TerosHDL in action](/img/super.gif) 
 </p>
+
+
+import logo_0 from '/img/nlnet.png';
+import logo_1 from '/img/ngi.png';
+
+
+## Sponsor
+
+This project was funded through the NGI Assure Fund, a fund established by NLnet with financial support from 
+the European Commission's Next Generation Internet programme, under the aegis of DG Communications Networks, 
+Content and Technology under grant agreement No 957073.
+
+<img src={logo_0} width="100" height="100"/><img src={logo_1} width="300" height="200"/>
+
