@@ -84,7 +84,7 @@ Install **make** in your system:
 <Tabs>
     <TabItem value="windows" label="Windows" default>
       Make is a Unix-based utility and is not included in Windows by default. However, you can install Make on Windows using the following steps:<br /><br />
-      1. Install a Unix-like environment such as Cygwin on your Windows system. This environment provide a Unix-like terminal and command-line tools, including Make. <br />Download and run the Cygwin installer from the official website <a href="(https://cygwin.com/install.html)">(https://cygwin.com/install.html)</a>. During the installation process, select the packages you want to install, including Make, from the package list.
+      1. Install a Unix-like environment such as Cygwin on your Windows system. This environment provide a Unix-like terminal and command-line tools, including Make. <br />Download and run the Cygwin installer from the official website (<a href="https://cygwin.com/install.html">https://cygwin.com/install.html</a>). During the installation process, select the packages you want to install, including Make, from the package list.
       2. Once you have installed a Unix-like environment, open the terminal or command prompt provided by that environment.<br /><br />
       3. Verify that Make has been installed by running the following command: <code>make -v</code>. This should display the version of Make installed on your system.<br /><br />
     </TabItem>
