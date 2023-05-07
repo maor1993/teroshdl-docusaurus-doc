@@ -26,7 +26,7 @@ This will open a new window with the current schematic of the design.
 as long as the schematic viewer is opened, any changes done in the file will automatically update the schematic.
 
 
-## usage report
+## Usage report
 yosys also output the utilization of cells used to create this schematic, you can view the results under the "Output" section of VScode.
 
 if the design failed to synthesize, you can view the issues in this window as well.
@@ -38,24 +38,20 @@ if the design failed to synthesize, you can view the issues in this window as we
 </p>
 
 
-
-
-## custom yosys command
+## Custom yosys command
 
 You can also modify the command sent to yosys for synthesis, this can be done in the configuration menu of TerosHDL
 
-the default command for verilog is:
+The default command for verilog is:
 ```
 read_verilog -sv {CURRENTFILE}; proc; opt; write_json teroshdl_yosys_output.json; stat
 ```
 
-and for vhdl is:
+And for vhdl is:
 
 ```
 ghdl --std=08 -fsynopsys {CURRENTFILE} -e; proc; opt; write_json teroshdl_yosys_output.json; stat
 ```
-
-
 
 
 One example you can use is to map the schematic to a technology map.

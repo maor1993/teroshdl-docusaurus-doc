@@ -16,7 +16,7 @@ Before installing TerosHDL, you need to install some dependencies, which are sof
 
 ### VSCodium/VSCode
 
-Install [VSCodium](https://vscodium.com/) or [VSCode](https://code.visualstudio.com/download)
+Install [VSCodium](https://vscodium.com/#install) or [VSCode](https://code.visualstudio.com/download)
 
 ### Python3
 
