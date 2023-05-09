@@ -79,6 +79,12 @@ Install Python package dependencies:
 
 ### Make
 
+:::caution
+
+You don't need to install `Make` if you are using Raptor.
+
+:::
+
 Install **make** in your system:
 
 <Tabs>
