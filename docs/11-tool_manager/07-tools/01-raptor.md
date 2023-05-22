@@ -26,6 +26,7 @@ Don't add the testbenches as source. You need to configure your testbench paths 
     - Summary: TCL project file.
     - Routing, Place... reports.
     - Simulation waveforms.
+5. If, in the outputs view, you click in `Summary >> Build folder` TerosHDL will open your Raptor project folder.
 
 ## Running a simulation
 
@@ -44,6 +45,12 @@ Don't add the testbenches as source. You need to configure your testbench paths 
 6. Configure other testbench sources in: `TerosHDL >> Configuration >> Tools >> Raptor Design Suite >> Other simulation sources`. E.g: `/home/carlos/rapidsilicon/tcl_examples/counter_vhdl/testbench.vhd, /home/carlos/rapidsilicon/tcl_examples/counter_vhdl/other_testbench.vhd`. If you want to add more than one source you need to put a comma: `/source/one.v, /source/two.v`
 7. [Run Raptor](../01-started.md#running-your-tool)
 8. Open your waveform from the Output View.
+9. If, in the outputs view, you click in `Summary >> Build folder` TerosHDL will open your Raptor project folder.
+
+<p align="center">
+
+![Views](/img/tool_manager/tools/raptor/output.png)
+</p>
 
 
 ## Running a Raptor project sample
