@@ -57,7 +57,7 @@ ghdl --std=08 -fsynopsys {CURRENTFILE} -e; proc; opt; write_json teroshdl_yosys_
 One example you can use is to map the schematic to a technology map.
 
 This can be done by adding ```synth``` to the yosys command, we now get the following schematic for the example shown previously.
-here, yosys implmented the design using logic primities rather than RTL.
+here, yosys implemented the design using logic primitives rather than RTL.
 
 
 <p align="center">
