@@ -10,7 +10,7 @@ You have [some examples](https://github.com/TerosTechnology/teroshdl-examples/tr
 
 ## Configuration
 
-A special symbol can be configured to identify the coments to be extracted from the HDL file. The special symbol must follow the comment characters of the language that is being used.
+A special symbol can be configured to identify the comments to be extracted from the HDL file. The special symbol must follow the comment characters of the language that is being used.
 
 By default TerosHDL uses "!" as symbol but you can configure it in: ``TerosHDL >> Configuration >> Documenter >> General``
 

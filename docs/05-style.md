@@ -1,6 +1,6 @@
 ---
 description: Linting (style checking)
-id: style_chekcing
+id: style_checking
 ---
 
 # Linting (style checking)
@@ -8,7 +8,7 @@ id: style_chekcing
 TerosHDL analyzes your code to ensure that it conforms to a set of pre-defined style rules or guidelines. In other words, it checks your code for style violations and suggests changes to bring it in line with the specified style rules.
 
 TerosHDL supports the following tools as <b>VHDL</b> style linters:
-* [VSG](ttps://github.com/jeremiah-c-leary/vhdl-style-guide#installation)
+* [VSG](https://github.com/jeremiah-c-leary/vhdl-style-guide#installation)
 
 TerosHDL supports the following tools as <b>Verilog/SystemVerilog</b> style linters:
 * [Verible](https://github.com/chipsalliance/verible#installation-1)
@@ -23,7 +23,7 @@ Under the configuration menu, you'll find <i>Linter Settings</i>.
 TerosHDL allows you to pass arguments for each linter tool. E.g: `--rules="enum-name-style,+line-length=length:80,-no-tabs"`
 
 ## Checking errors
-Once configuration was performed correctly, TerosHDL will route all errors from your chosen style-checker to VScodes built in error system.
+Once configuration was performed correctly, TerosHDL will route all errors from your chosen style-checker to VScode's built in error system.
 
 
 Problems detected will be shown with yellows squigglies.
