@@ -1,6 +1,6 @@
 ---
 description: Linting (errors checking)
-id: errors_chekcing
+id: errors_checking
 ---
 
 # Linting (errors checking)

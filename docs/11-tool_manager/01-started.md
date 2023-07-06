@@ -18,7 +18,7 @@ In TerosHDL, you have several options for creating and loading projects. You can
 
 - To create an empty project, simply click on the "Add project" button in the TerosHDL project view and select `Empty project`. This will create a new project with no files or libraries.
 
-- To load an existing project select `Load projecto from EDAM`.
+- To load an existing project select `Load project from EDAM`.
 
 - To load a project from a VUnit run.py file, simply click on the "Load project from VUnit". This will open a file explorer where you can browse to the location of the run.py file. TerosHDL will automatically load the project based on the information in the run.py file.
 
@@ -92,7 +92,7 @@ In addition to navigating through the generated artifacts, users can also check 
 
 :::info
 
-Only supported if you select Raptor Desing Suite
+Only supported if you select Raptor Design Suite
 
 :::
 

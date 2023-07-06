@@ -16,7 +16,7 @@ Colibri is a TypeScript library to work with HDL (VHDL, Verilog and SV). It's th
 - Code templates.
 - Hierarchy images.
 - Dependencies images.
-- Projec manager: simulations, compilations...
+- Project manager: simulations, compilations...
 
  ## Architecture
 
