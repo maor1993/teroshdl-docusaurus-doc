@@ -8,6 +8,13 @@ TerosHDL attempts to recognize any state machines used in the Verilog/SV/VHDL co
 
 Included is a built in visualizer which allows you to view previously detected state machines.
 
+:::danger
+Currently TerosHDL does not support all types of FSMs. Some not supported statements are:
+- `case` statement inside an `if-else`.
+- `functions, procedures...` inside FSM.
+:::
+
+
 ## Usage
 While having an HDL file open, you can click on the state machine viewer on the top right of the editor:
 
