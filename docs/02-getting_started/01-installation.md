@@ -110,9 +110,9 @@ Install **make** in your system:
 
 ### From market
 
-TerosHDL is present in [VSCodium market](https://open-vsx.org/) and [VSCode market](https://open-vsx.org/). 
+TerosHDL is present in [VSCodium market](https://open-vsx.org/extension/teros-technology/teroshdl) and [VSCode market](https://marketplace.visualstudio.com/items?itemName=teros-technology.teroshdl). 
 
-The VSIX market for VSCodium is a marketplace for VSCode extensions that are compatible with VSCodium, which is a free and open-source version of VSCode that is built from the same source code but without the Microsoft branding, telemetry, and licensing restrictions.
+The VSX market for VSCodium is a marketplace for VSCode extensions that are compatible with VSCodium, which is a free and open-source version of VSCode that is built from the same source code but without the Microsoft branding, telemetry, and licensing restrictions.
 
 To access the market for VSCodium/VSCode, you can follow these steps:
 
