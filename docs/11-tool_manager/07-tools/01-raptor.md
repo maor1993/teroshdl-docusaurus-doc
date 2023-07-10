@@ -4,6 +4,13 @@ description: Raptor
 
 # Raptor
 
+:::caution
+
+TerosHDL is compatible with Raptor 2023.04
+
+:::
+
+
 ## Configuration
 
 1. [Configure Raptor as your tool.](../01-started.md#configuration)
